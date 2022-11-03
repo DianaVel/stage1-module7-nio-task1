@@ -26,7 +26,7 @@ public class FileReader {
             buffer.clear();
 
         } catch (IOException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new FileIOException("Exception occurred working with passed file, more details "+ e.getMessage());
         }
         return parseInfo(data.toString());
     }
